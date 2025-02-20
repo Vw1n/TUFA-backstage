@@ -1,5 +1,8 @@
 <script setup>
 import CommonAside from '@/components/CommonAside.vue'
+import CommonHeader from '@/components/CommonHeader.vue';
+import CommonTab from '../components/CommonTab.vue';
+import router from '@/router';
 </script>
 
 <template>
@@ -11,15 +14,16 @@ import CommonAside from '@/components/CommonAside.vue'
                 <el-header>
                     <common-header />
                 </el-header>
+                <common-tab />
                 <el-main class="right-main">
-                    main
+                    <router-view></router-view>
                 </el-main>
             </el-container>
         </el-container>
     </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped >
 .common-layout,
 .lay-container {
     height: 100%;
